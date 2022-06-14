@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <title>Deep Thought</title>
+</head>
+
+<body>
+  <header style="display: flex; background-color: whitesmoke;">
+    <img class="ms-5" src="https://deepthought.education/assets/images/logo/logo.svg" alt="">
+    
+    <nav class="navbar" style="margin-left: 750px;">
+      
+        <a class="navbar-brand" href="#">
+          <img src="data:image/png;base64,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" alt="" width="35" height="30">
+        </a>
+
+        <a class="navbar-brand " href="#">
+          <img src="https://mpng.subpng.com/20180330/spe/kisspng-computer-icons-binoculars-binocular-5abecab473b1b2.3496318815224531724739.jpg" alt="" width="35" height="30">
+        </a>
+
+        <a class="navbar-brand" href="#">
+          <img src="https://i.pinimg.com/originals/82/60/8e/82608e302686b610a5c1c55563ea4cda.png" alt="" width="35" height="30">
+        </a>
+
+        <a class="navbar-brand" href="#">
+          <img src="https://flyclipart.com/thumb2/alarm-alert-bell-notification-icon-89422.png" alt="" width="40" height="30">
+        </a>
+        
+        <a class="navbar-brand" href="#">
+          <img src="https://e7.pngegg.com/pngimages/121/721/png-clipart-round-bubble-upselling-circle-red-arrows-grey-circle-icon-material-cheque-thumbnail.png" alt="" width="30" height="24">
+        </a>
+      
+        <svg xmlns="#" width="18" height="20" fill="currentColor" class="bi bi-three-dots-vertical mt-1" viewBox="0 0 16 16">
+          <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+        </svg>
+    </nav>
+  </header>
+
+
+
+
+  <div class="d-flex">
+  <div class="mt-5" style="width: 6rem; height: 50rem;border-right: 1px solid lightgray; border-bottom: 1px solid lightgray; border-radius: 20px;box-shadow: 5px 1px 5px 2px #c2c2c2a0;">
+
+    <nav class="navbar navbar-dark bg-dark"style=" border-top-right-radius: 20px;">
+      <div class="container-fluid"  >
+        <button class="ms-4 navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <p class="ms-4 mt-3" style="border: 2px solid rgb(0, 150, 255);color: rgb(0, 150, 255); width:43px;padding: 7px; border-radius: 9px;">&nbsp; 1</p>
+  </div>
+
+
+
+
+
+
+
+  <div class="card mx-auto mt-5" style="width: 50rem;border-radius: 20px;box-shadow: 5px 1px 5px 2px #c2c2c2a0;">
+
+
+    <div style="background-color: blue; height: 3rem;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+      <p class="text-light ms-3 mt-2"><b>You are Taking Challenges of New Project</b></p>
+    </div>
+
+    <div class="card-body d-flex">
+      <div class="card" style="width: 22rem;height: 22.5rem; border-radius: 20px;box-shadow: 5px 1px 5px 2px #c2c2c2a0;">
+        <div class="bg-dark" style="height: 3rem;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+          <p class="text-light ms-5 mt-2">Asset heading 1</p>
+        </div>
+        <div class="card-body">
+
+
+          <div class="container mt-3" style="font-weight: bold;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sunt in culpa qui
+              officia deserunt mollit anim id est laborum.</p>
+            <button style="float:inline-end;border: white;" type="button"
+              class="bg-white text-dark btn btn-primary dropdown-toggle" data-bs-toggle="collapse"
+              data-bs-target="#demo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            <div style="opacity: 0.9;" id="demo" class="collapse bg-white">"Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore."
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card ms-4" style="width: 22rem;height: 22.5rem; border-radius: 20px;box-shadow: 5px 1px 5px 2px #c2c2c2a0;">
+        <div class="bg-dark" style="height: 3rem;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+          <p class="text-light ms-5 mt-2">Asset heading 2</p>
+        </div>
+        <div class="card-body">
+          <p style="border: 1px solid rgb(217, 216, 216);height:10rem;border-radius:10px;color: rgb(160, 157, 157);">
+            Reflect as per given guidelines</p>
+
+          <button class="text-light"
+            style="float:inline-end;background-color: rgb(52, 52, 206); border-radius: 10px;">Submit</button>
+
+        </div>
+
+        <div>
+          <button style="float:inline-end;margin-right: 25px;margin-bottom: 10px;border: white;" type="button"
+            class="bg-white text-dark btn btn-primary dropdown-toggle" data-bs-toggle="#" data-bs-target="#"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body d-flex">
+      <div class="card" style="width: 22rem;height: 43rem; border-radius: 20px;box-shadow: 5px 1px 5px 2px #c2c2c2a0;">
+        <div class="bg-dark" style="height: 3rem;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+          <p class="text-light ms-5 mt-2">Asset heading 3</p>
+        </div>
+        <div class="card-body">
+          <h5><span style="font-size: 1.5em;">W</span>IKIPEDI<span style="font-size: 1.5em;">A</span></h5>
+
+          <div class="d-flex">
+            <p>Big data
+              From Wikipedia, the free encyclopedia
+              Jump to navigation
+              Jump to search
+              This article is about large collections of data. [1]</p>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hilbert_InfoGrowth.png/400px-Hilbert_InfoGrowth.png"
+              style="width: 180px; height: 150px;" alt="">
+
+          </div>
+          <p>
+            Non-linear growth of digital global information-storage capacity and the waning of analog storage
+            .</p>
+          <p>Current usage of the term big data tends to refer to the use of predictive analytics, user behavior
+            analytics, or certain other advanced data analytics methods that extract value from big data, and seldom to
+            a particular size of data set. "There is little doubt that the quantities of data now available are indeed
+            large, but that's not the most relevant characteristic of this new data ecosystem.</p>
+
+          <nav class="ms-4" aria-label="Page navigation example" style="opacity: 0.8; margin-top: -60px;">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link bg-dark text-light">Page</a></li>
+              <li class="page-item"><a class="page-link bg-dark text-light"
+                  href="https://en.wikipedia.org/wiki/Big_data">1 / 35</a></li>
+              <li class="page-item"><a class="page-link bg-dark text-light" href="#"> - </a></li>
+              <li class="page-item"><a class="page-link bg-dark text-light" href="#"> <span>&#x1F50E;</span> </a></li>
+              <li class="page-item"><a class="page-link bg-dark text-light" href="#"> + </a></li>
+            </ul>
+          </nav>
+          <button style="float:inline-end;border: white;" type="button"
+            class="bg-white text-dark btn btn-primary dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#demo1"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+
+          <div style="opacity: 0.9;" id="demo1" class="collapse bg-white">
+            <p>
+              For the band, see Big Data (band). For the practice of
+              buying and selling of personal and consumer data, see Surveillance capitalism.
+              Non-linear growth of digital global information-storage capacity and the waning of analog storage
+              Big data refers to data sets that are too large or complex to be dealt with by traditional data-processing
+              application software.
+
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="card ms-4" style="width: 22rem;height: 27rem; border-radius: 20px;box-shadow: 5px 1px 5px 2px #c2c2c2a0;">
+        <div class="bg-dark" style="height: 3rem;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+          <p class="text-light ms-5 mt-2">Asset heading 4 </p>
+        </div>
+        <div class="card-body">
+          <img class="ms-4"
+            src="data:image/png;base64,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"
+            alt="">
+          <div class="mt-3">
+            <button style="float:inline-end;border: white;" type="button"
+              class="bg-white text-dark btn btn-primary dropdown-toggle" data-bs-toggle="collapse"
+              data-bs-target="#demo2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+
+            <div style="opacity: 0.9;" id="demo2" class="collapse bg-white">
+              <p>Founded in 1941, CBC News is the largest news broadcaster in Canada and has local, regional, and
+                national broadcasts and stations.</p>
+            </div>
+          </div>
+          <div>
+            <a href="https://www.cbc.ca/news">cbc</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="card-body d-flex">
+      <div class="card" style="width: 22rem;height: 20rem; border-radius: 20px;box-shadow: 5px 1px 5px 2px #c2c2c2a0;">
+        <div class="bg-dark" style="height: 3rem;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+          <p class="text-light ms-5 mt-2">Asset heading 5</p>
+        </div>
+        <div class="card-body">
+
+          <div style="background-color: lightgray; width:320px;height: 60px;">
+            <audio controls class="ms-2 mt-2">
+              <source src="" type="audio/ogg">
+              <source src="horse.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          </p>
+          <button style="float:inline-end;border: white;" type="button"
+            class="bg-white text-dark btn btn-primary dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#demo5"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+          <div style="opacity: 0.9;" id="demo5" class="collapse bg-white">"Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore."
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card ms-4" style="width: 22rem;height: 25rem; border-radius: 20px;box-shadow: 5px 1px 5px 2px #c2c2c2a0;">
+        <div class="bg-dark" style="height:3rem;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+          <p class="text-light ms-5 mt-2">Asset heading 6</p>
+        </div>
+        <div class="card-body" style="width: 20rem;">
+
+          <iframe width="300" height="250" src="https://www.youtube.com/embed/s8H0Sx7jy7c" title="YouTube video player"
+            frameborder="030            allow=" accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+            picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+        <div>
+          <button style="float:inline-end;margin-right: 25px;margin-bottom: 10px;border: white;" type="button"
+            class="bg-white text-dark btn btn-primary dropdown-toggle" data-bs-toggle="#" data-bs-target="#"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+        </div>
+      </div>
+</div>
+    </div>
+  </div>
+
+  <div>
+    <button class="text-light mt-3"
+      style="margin-left: 75%;background-color: rgb(52, 52, 206); border-radius: 10px;">Submit</button>
+
+  </div>
+  
+</body>
+
+</html>
